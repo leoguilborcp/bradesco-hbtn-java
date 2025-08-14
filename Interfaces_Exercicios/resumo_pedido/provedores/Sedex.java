@@ -1,6 +1,6 @@
 package provedores;
 public class Sedex implements ProvedorFrete {
-    public Frete calcularFrete(int peso, double valor) {
+    public Frete calcularFrete(double peso, double valor) {
         double valorFrete;
         if (peso > TipoProvedorFrete.SEDEX.getPesoMaximo()) {
             valorFrete = valor * TipoProvedorFrete.SEDEX.getDescontoMaximo();
@@ -9,5 +9,9 @@ public class Sedex implements ProvedorFrete {
         }
         
         return new Frete("Sedex", valorFrete);
+    }
+    
+    public TipoProvedorFrete obterTipoProvedorFrete() {
+        return TipoProvedorFrete.SEDEX;
     }
 }
