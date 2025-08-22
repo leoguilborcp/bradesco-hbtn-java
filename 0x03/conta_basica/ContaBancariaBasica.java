@@ -38,15 +38,18 @@ public class ContaBancariaBasica {
     }
 
     public double calcularJurosMensal() {
-        if (this.saldo <= 0) {
+        if (this.saldo < 0) {
         return 0; // No interest if balance is zero or negative
         }
-        return this.saldo * (this.taxaJurosAnual / 100 / 12);
+        double jurosMensal = this.taxaJurosAnual / 12;
+        return  (jurosMensal / 100)*this.saldo;
     }
     public void aplicarAtualizacaoMensal() {
+
+        double tarifa = calcularTarifaMensal();      
         double juros = calcularJurosMensal();
+        
         this.saldo += juros;
-        double tarifa = calcularTarifaMensal();
         this.saldo -= tarifa;
     }
 
