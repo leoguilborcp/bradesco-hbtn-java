@@ -7,13 +7,13 @@ public class Livro {
 
     public Livro(String titulo, String autor, double preco) throws LivroInvalidoException, AutorInvalidoException {
         if (titulo == null || titulo.trim().isEmpty() || titulo.length() < 3) {
-            throw new LivroInvalidoException("Titulo invalido");
+            throw new LivroInvalidoException("Titulo de livro invalido");
         }
         if (autor == null || autor.trim().isEmpty() || autor.split(" ").length < 2) {
-            throw new AutorInvalidoException("Autor invalido");
+            throw new AutorInvalidoException("Nome de autor invalido");
         }
         if (preco <= 0) {
-            throw new LivroInvalidoException("Preco invalido");
+            throw new LivroInvalidoException("Preco de livro invalido");
         }
         this.titulo = titulo;
         this.autor = autor;
