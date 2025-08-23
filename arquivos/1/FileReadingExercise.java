@@ -6,8 +6,8 @@ import java.io.IOException;
 public class FileReadingExercise {
     public static void main(String[] args) {
         String fileName = "exemplo.txt"; // Nome do arquivo fixo para leitura
-        System.out.println("Conteúdo do arquivo '" + fileName + "':");
-        
+        System.out.println("Conteúdo do arquivo 'exemplo.txt':");
+        System.out.println();
         try {
             BufferedReader reader = new BufferedReader(new FileReader(fileName));
             String linha = reader.readLine();
@@ -17,7 +17,7 @@ public class FileReadingExercise {
             }
         } catch (IOException e) {
             System.err.println("Erro ao ler o arquivo: " + e.getMessage());
-        }
+        }System.out.println();
         System.out.println("Leitura do arquivo concluída.");
     }
 }
