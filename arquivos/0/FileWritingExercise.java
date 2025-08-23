@@ -16,9 +16,13 @@ import java.io.BufferedWriter;
         BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
              System.out.println("Digite o conteúdo a ser escrito no arquivo (digite 'sair' para finalizar):");
              String linha;
-             while (!(linha = scanner.nextLine()).trim().equalsIgnoreCase("sair")) {
+             while (true) {
+                    linha = scanner.nextLine();
                  writer.write(linha);
                  writer.newLine();
+                 if (linha.trim().equalsIgnoreCase("sair")) {
+                     break;
+                 }
              }
          
          
