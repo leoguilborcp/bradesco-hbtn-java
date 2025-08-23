@@ -55,10 +55,10 @@ public class Produto {
     }
 
 
-    // Representação do Produto em String
+    // Representaï¿½ï¿½o do Produto em String
     @Override
     public String toString() {
-        return "ID: " + id + ", Nome: " + nome + ", Quantidade: " + quantidade + ", Preço: " + preco;
+        return "ID: " + id + ", Nome: " + nome + ", Quantidade: " + quantidade + ", PreÃ§o: " + preco;
     }
 
 
