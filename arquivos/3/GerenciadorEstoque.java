@@ -14,7 +14,7 @@ public class GerenciadorEstoque {
             System.out.println("3. Exibir Estoque");
             System.out.println("4. Atualizar Quantidade de Produto");
             System.out.println("5. Sair");
-            System.out.print("Escolha uma op√ß√£o: ");
+            System.out.print("Escolha uma opÁ„o: ");
             int opcao = scanner.nextInt();
             scanner.nextLine(); // Limpar o buffer
 
@@ -25,12 +25,12 @@ public class GerenciadorEstoque {
                     String nome = scanner.nextLine();
                     System.out.print("Digite a quantidade: ");
                     int quantidade = scanner.nextInt();
-                    System.out.print("Digite o pre√ßo: ");
+                    System.out.print("Digite o preÁo: ");
                     double preco = scanner.nextDouble();
                     estoque.adicionarProduto(nome, quantidade, preco);
                     break;
                 case 2:
-                    System.out.print("Digite o ID do produto a ser exclu√≠do: ");
+                    System.out.print("Digite o ID do produto a ser excluÌdo: ");
                     int idExcluir = scanner.nextInt();
                     estoque.excluirProduto(idExcluir);
                     break;
@@ -50,7 +50,7 @@ public class GerenciadorEstoque {
                     scanner.close();
                     return;
                 default:
-                    System.out.println("Op√ß√£o inv√°lida!");
+                    System.out.println("OpÁ„o inv·lida!");
             }
         }
     }
