@@ -16,18 +16,18 @@ public class ArrayExercicio {
         int maiorNumero = Integer.MIN_VALUE;
 
 
-        // Preenchendo o array com números fornecidos pelo usuário
+        // Preenchendo o array com nÃºmeros fornecidos pelo usuÃ¡rio
         // Utilize scanner.nextInt(); para receber o numero digitado
-        System.out.println("Digite 10 números inteiros:");
+        System.out.println("Digite 10 nÃºmeros inteiros:");
         for (int i = 0; i < tamanhoArray; i++) {
 
-            System.out.printf("Digite o número %d: ", i + 1);
+            System.out.printf("Digite o nÃºmero %d: ", i + 1);
             try{
                 numeros[i] = scanner.nextInt();
             } catch (Exception e) {
-                System.out.println("Entrada inválida. Por favor, digite um número inteiro.");
-                scanner.next(); // Limpa a entrada inválida
-                i--; // Decrementa i para repetir a iteração
+                System.out.println("Entrada invÃ¡lida. Por favor, digite um nÃºmero inteiro.");
+                scanner.next(); // Limpa a entrada invÃ¡lida
+                i--; // Decrementa i para repetir a iteraÃ§Ã£o
                 continue;
             }
             builder.append(String.format("%d ", numeros[i]));
@@ -38,10 +38,10 @@ public class ArrayExercicio {
         }
             
         // Exibindo os resultados
-        System.out.println("Conteúdo do array:");
+        System.out.println("ConteÃºdo do array:");
         System.out.println(builder.toString());
-        System.out.println("Soma de todos os números: " + soma);
-        System.out.println("Maior número no array: " + maiorNumero);
+        System.out.println("Soma de todos os nÃºmeros: " + soma);
+        System.out.println("Maior nÃºmero no array: " + maiorNumero);
 
         // Fechando o scanner
         scanner.close();
