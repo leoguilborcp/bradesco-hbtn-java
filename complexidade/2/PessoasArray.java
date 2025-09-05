@@ -22,7 +22,7 @@ public class PessoasArray {
         boolean encontrado = false;
         int inicio = 0;
         int fim = nomes.length - 1;
-        
+        System.out.println("Procurando o nome: \"" + nome + "\"");
         while (inicio <= fim) {
             int meio = (inicio + fim) / 2;
             System.out.println("Passando pelo indice: " + meio);
@@ -37,7 +37,7 @@ public class PessoasArray {
                 fim = meio - 1;
             }
         }
-        
+
         if (!encontrado) {
              throw new IllegalArgumentException("O nome " + nome + " não se encontra no array de nomes");
         }
