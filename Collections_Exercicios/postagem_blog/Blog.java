@@ -62,7 +62,7 @@ public class Blog{
     }
 
     public Map<Categorias, Set<Post>> obterTodosPostsPorCategorias() {
-    Map<Categorias, Set<Post>> postsPorCategoria = new HashMap<>();
+    Map<Categorias, Set<Post>> postsPorCategoria = new TreeMap<>();
     for (Post post : posts) {
         Categorias categoria = Categorias.valueOf(post.getCategoria().getDescricao().toUpperCase());
         postsPorCategoria.putIfAbsent(categoria, new TreeSet<>());
