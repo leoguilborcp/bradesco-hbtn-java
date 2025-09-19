@@ -39,7 +39,3 @@ public class Produto {
         return nome + " " + preco + " " + peso + " " + quantidadeEmEstoque + " " + tipo;
     }
 }
-
-enum TiposProduto {
-    COZINHA, ELETRONICO, BRINQUEDO;
-}
