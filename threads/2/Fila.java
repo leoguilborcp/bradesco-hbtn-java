@@ -17,7 +17,7 @@ public class Fila {
         System.out.println("Produtor produziu: " + item);
 
         // Notifica o consumidor que o item foi produzido
-        notify();
+        notifyAll();
     }
 
 
@@ -35,7 +35,7 @@ public class Fila {
 
 
         // Notifica o produtor que o buffer está vazio
-        notify();
+        notifyAll();
 
 
         return consumido;
