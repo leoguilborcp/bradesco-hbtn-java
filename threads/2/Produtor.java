@@ -1,3 +1,4 @@
+    import java.util.Random;
 public class Produtor extends Thread {
     private Fila fila;
 
@@ -9,8 +10,10 @@ public class Produtor extends Thread {
 
     @Override
     public void run() {
-        try {while(true){
-                int i = (int) (Math.random() * 100) + 1;
+        try {
+            Random random = new Random();
+            while (true) {
+                int i = random.nextInt(100) + 1;
                 fila.adicionar(i);  // O produtor coloca os itens na fila
                 Thread.sleep(1000);   // Simula o tempo para produzir um item
                 }
